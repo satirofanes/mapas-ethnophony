@@ -1,0 +1,1957 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_afee001d3a6b229cd43338a66e3abfa6 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+    <div style="position: fixed; top: 20px; left: 70px; width: auto; height: auto; 
+                background-color: rgba(255, 255, 255, 0.92); z-index:9999; 
+                border-radius: 8px; padding: 14px; box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+                font-family: sans-serif; pointer-events: none;">
+        <h3 style="margin:0 0 6px 0; color:#1a252f; font-size:15px; font-weight:bold;">🌍 Música del Mundo</h3>
+        <p style="margin:0; color:#555; font-size:12px; line-height:1.4; font-style:italic;">Escucha The Secret Museum Of Mankind Vols. 1 y 4</p>
+    </div>
+    
+    
+            <div class="folium-map" id="map_afee001d3a6b229cd43338a66e3abfa6" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_afee001d3a6b229cd43338a66e3abfa6 = L.map(
+                "map_afee001d3a6b229cd43338a66e3abfa6",
+                {
+                    center: [25.0749523834158, 28.39081562449984],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 4,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_d4c34f93a6261fe8357783db610e1606 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            var tile_layer_2f60becce9ea5ba051aaa4f9b27fe10d = L.tileLayer(
+                "https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "OpenTopoMap",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            var tile_layer_f1630dcd179429db4cce9c2d64a8ab9e = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Esri Satellite",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_f1630dcd179429db4cce9c2d64a8ab9e.addTo(map_afee001d3a6b229cd43338a66e3abfa6);
+        
+    
+            var marker_a5af8b9d6a780c5d45aeffe92426a319 = L.marker(
+                [59.5343180010956, 14.326171875000002],
+                {
+}
+            ).addTo(map_afee001d3a6b229cd43338a66e3abfa6);
+        
+    
+            var icon_cecee3b82a703dec15a316c4e8ff8202 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1ac2a06c9dd9f2f05bbbb26a63428740 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_ba4e29c489ed4ab4f2a427419b16e9d5 = $(`<div id="html_ba4e29c489ed4ab4f2a427419b16e9d5" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 230px; line-height: 1.4;">             <h4 style="margin:0 0 5px 0; color:#2c3e50; font-size:14px;">Locklatar</h4>             <p style='font-style: italic; color: #34495e; margin: 6px 0;'>Artista: Elin Lisslass |  Lugar: Suecia</p>             <audio controls style="width:100%; margin-top:5px;"><source src="https://archive.org/download/thesecretmuseumofmankindvol4/01%20-%20Elin%20Lisslass%20-%20Locklatar%20-%20Sweden.mp3"></audio><img src="https://archive.org/download/thesecretmuseumofmankindvol4/R-2929884-1307823681.jpeg.jpg" style="width:100%; border-radius:5px; margin-top:5px;">             <ul style="font-size:11px; margin-top:10px; padding-left:15px; color:#555;">                                               </ul>         </div>         </div>`)[0];
+                popup_1ac2a06c9dd9f2f05bbbb26a63428740.setContent(html_ba4e29c489ed4ab4f2a427419b16e9d5);
+            
+        
+
+        marker_a5af8b9d6a780c5d45aeffe92426a319.bindPopup(popup_1ac2a06c9dd9f2f05bbbb26a63428740)
+        ;
+
+        
+    
+    
+                marker_a5af8b9d6a780c5d45aeffe92426a319.setIcon(icon_cecee3b82a703dec15a316c4e8ff8202);
+            
+    
+            var marker_e29f6e7a0aae58b069cf63ba1c9f1328 = L.marker(
+                [-17.308687886770024, -65.03906250000001],
+                {
+}
+            ).addTo(map_afee001d3a6b229cd43338a66e3abfa6);
+        
+    
+            var icon_c7ffd58bc8650deef3d6af93c45bcd61 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1c7abb4d06f2ab26ade4ff8d2334119d = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_0e2333b7e1b20408f84503d59f5d1ef6 = $(`<div id="html_0e2333b7e1b20408f84503d59f5d1ef6" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 230px; line-height: 1.4;">             <h4 style="margin:0 0 5px 0; color:#2c3e50; font-size:14px;">Tonada De Tarka Con Callaguas</h4>             <p style='font-style: italic; color: #34495e; margin: 6px 0;'>Artista: Alberto Ruiz |  Lugar: Bolivia</p>             <audio controls style="width:100%; margin-top:5px;"><source src="https://archive.org/download/thesecretmuseumofmankindvol4/02%20-%20Alberto%20Ruiz%20-%20Tonada%20De%20Tarka%20Con%20Callaguas%20-%20Bolivia.mp3"></audio><img src="https://archive.org/download/thesecretmuseumofmankindvol4/R-2929884-1307823681.jpeg.jpg" style="width:100%; border-radius:5px; margin-top:5px;">             <ul style="font-size:11px; margin-top:10px; padding-left:15px; color:#555;">                                               </ul>         </div>         </div>`)[0];
+                popup_1c7abb4d06f2ab26ade4ff8d2334119d.setContent(html_0e2333b7e1b20408f84503d59f5d1ef6);
+            
+        
+
+        marker_e29f6e7a0aae58b069cf63ba1c9f1328.bindPopup(popup_1c7abb4d06f2ab26ade4ff8d2334119d)
+        ;
+
+        
+    
+    
+                marker_e29f6e7a0aae58b069cf63ba1c9f1328.setIcon(icon_c7ffd58bc8650deef3d6af93c45bcd61);
+            
+    
+            var marker_211d297ef9c833a7423733b28525c893 = L.marker(
+                [35.232159412017154, 24.763183593750004],
+                {
+}
+            ).addTo(map_afee001d3a6b229cd43338a66e3abfa6);
+        
+    
+            var icon_bd056627ba073063f78124c2643f4e67 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c5882ecbffa7cb8811e8f9c2c268f895 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_8a8eb13b9bad0f9c7e9401a65e75db4a = $(`<div id="html_8a8eb13b9bad0f9c7e9401a65e75db4a" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 230px; line-height: 1.4;">             <h4 style="margin:0 0 5px 0; color:#2c3e50; font-size:14px;">Syrtas Kizzamitika</h4>             <p style='font-style: italic; color: #34495e; margin: 6px 0;'>Artista: Black Jim |  Lugar: Isla de Creta</p>             <audio controls style="width:100%; margin-top:5px;"><source src="https://archive.org/download/thesecretmuseumofmankindvol4/03%20-%20%22Black%20Jim%22%20-%20Syrtas%20Kizzamitika%20-%20Crete.mp3"></audio><img src="https://archive.org/download/thesecretmuseumofmankindvol4/R-2929884-1307823681.jpeg.jpg" style="width:100%; border-radius:5px; margin-top:5px;">             <ul style="font-size:11px; margin-top:10px; padding-left:15px; color:#555;">                                               </ul>         </div>         </div>`)[0];
+                popup_c5882ecbffa7cb8811e8f9c2c268f895.setContent(html_8a8eb13b9bad0f9c7e9401a65e75db4a);
+            
+        
+
+        marker_211d297ef9c833a7423733b28525c893.bindPopup(popup_c5882ecbffa7cb8811e8f9c2c268f895)
+        ;
+
+        
+    
+    
+                marker_211d297ef9c833a7423733b28525c893.setIcon(icon_bd056627ba073063f78124c2643f4e67);
+            
+    
+            var marker_00e6b3556b7fc3c0f0312b097db5f6d4 = L.marker(
+                [42.553080288955826, 12.524414062500002],
+                {
+}
+            ).addTo(map_afee001d3a6b229cd43338a66e3abfa6);
+        
+    
+            var icon_9b5b54e32a753637718b51e235ff0a4b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dbd07e246f680a8dc4e2a594559763d5 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_9a3357311bc9c1a2feb7437a2854239b = $(`<div id="html_9a3357311bc9c1a2feb7437a2854239b" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 230px; line-height: 1.4;">             <h4 style="margin:0 0 5px 0; color:#2c3e50; font-size:14px;">Il Bel Mazzolino</h4>             <p style='font-style: italic; color: #34495e; margin: 6px 0;'>Artista: Squadra Di Bel Canto |  Lugar: Italia</p>             <audio controls style="width:100%; margin-top:5px;"><source src="https://archive.org/download/thesecretmuseumofmankindvol4/04%20-%20Squadra%20Di%20Bel%20Canto%20-%20Il%20Bel%20Mazzolino%20-%20Italy.mp3"></audio><img src="https://archive.org/download/thesecretmuseumofmankindvol4/R-2929884-1307823681.jpeg.jpg" style="width:100%; border-radius:5px; margin-top:5px;">             <ul style="font-size:11px; margin-top:10px; padding-left:15px; color:#555;">                                               </ul>         </div>         </div>`)[0];
+                popup_dbd07e246f680a8dc4e2a594559763d5.setContent(html_9a3357311bc9c1a2feb7437a2854239b);
+            
+        
+
+        marker_00e6b3556b7fc3c0f0312b097db5f6d4.bindPopup(popup_dbd07e246f680a8dc4e2a594559763d5)
+        ;
+
+        
+    
+    
+                marker_00e6b3556b7fc3c0f0312b097db5f6d4.setIcon(icon_9b5b54e32a753637718b51e235ff0a4b);
+            
+    
+            var marker_3b1bf4b5ad51be1b3ba04b12f5a5d41d = L.marker(
+                [-19.020577110966798, 46.58203125000001],
+                {
+}
+            ).addTo(map_afee001d3a6b229cd43338a66e3abfa6);
+        
+    
+            var icon_92cc5fd399d80c62e4aad4e0fceda68e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_974725afbc28ad394caa5d8505cd24f2 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_da1912ab6b5113acac8e2db3386dd253 = $(`<div id="html_da1912ab6b5113acac8e2db3386dd253" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 230px; line-height: 1.4;">             <h4 style="margin:0 0 5px 0; color:#2c3e50; font-size:14px;">Anio No Mba Hisoka</h4>             <p style='font-style: italic; color: #34495e; margin: 6px 0;'>Artista: Mme. Ravao & Rajoro | Lugar: Madagascar</p>             <audio controls style="width:100%; margin-top:5px;"><source src="https://archive.org/download/thesecretmuseumofmankindvol4/05%20-%20Mme.%20Ravao%20%26%20Rajoro%20-%20Anio%20No%20Mba%20Hisoka%20-%20Madagascar.mp3"></audio><img src="https://archive.org/download/thesecretmuseumofmankindvol4/R-2929884-1307823681.jpeg.jpg" style="width:100%; border-radius:5px; margin-top:5px;">             <ul style="font-size:11px; margin-top:10px; padding-left:15px; color:#555;">                                               </ul>         </div>         </div>`)[0];
+                popup_974725afbc28ad394caa5d8505cd24f2.setContent(html_da1912ab6b5113acac8e2db3386dd253);
+            
+        
+
+        marker_3b1bf4b5ad51be1b3ba04b12f5a5d41d.bindPopup(popup_974725afbc28ad394caa5d8505cd24f2)
+        ;
+
+        
+    
+    
+                marker_3b1bf4b5ad51be1b3ba04b12f5a5d41d.setIcon(icon_92cc5fd399d80c62e4aad4e0fceda68e);
+            
+    
+            var marker_2f1a8234472a75483b90854a5f480d84 = L.marker(
+                [30.278044377800153, 71.05957031250001],
+                {
+}
+            ).addTo(map_afee001d3a6b229cd43338a66e3abfa6);
+        
+    
+            var icon_a9c49f1bea457b59ae9c87c8b9d4fd8c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_81ba5b9cf20a58c241ff141c67baa7c7 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_922f9a3ba289b30c7854ceda8966d6b0 = $(`<div id="html_922f9a3ba289b30c7854ceda8966d6b0" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 230px; line-height: 1.4;">             <h4 style="margin:0 0 5px 0; color:#2c3e50; font-size:14px;">Been</h4>             <p style='font-style: italic; color: #34495e; margin: 6px 0;'>Artista: R. Singh Bikhul |  Lugar: Pakistan</p>             <audio controls style="width:100%; margin-top:5px;"><source src="https://archive.org/download/thesecretmuseumofmankindvol4/06%20-%20R.%20Singh%20Bikhul%20-%20Been%20-%20Pakistan.mp3"></audio><img src="https://archive.org/download/thesecretmuseumofmankindvol4/R-2929884-1307823681.jpeg.jpg" style="width:100%; border-radius:5px; margin-top:5px;">             <ul style="font-size:11px; margin-top:10px; padding-left:15px; color:#555;">                                               </ul>         </div>         </div>`)[0];
+                popup_81ba5b9cf20a58c241ff141c67baa7c7.setContent(html_922f9a3ba289b30c7854ceda8966d6b0);
+            
+        
+
+        marker_2f1a8234472a75483b90854a5f480d84.bindPopup(popup_81ba5b9cf20a58c241ff141c67baa7c7)
+        ;
+
+        
+    
+    
+                marker_2f1a8234472a75483b90854a5f480d84.setIcon(icon_a9c49f1bea457b59ae9c87c8b9d4fd8c);
+            
+    
+            var marker_9767082569e99f57ef32b9b6b6f6d60c = L.marker(
+                [-29.104176683949973, 30.893554687500004],
+                {
+}
+            ).addTo(map_afee001d3a6b229cd43338a66e3abfa6);
+        
+    
+            var icon_d57a549f67d2ed9f00a37d9ca03b4d43 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dbe348f12b147ee2347359462a5ddcf3 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_0e5904920d39b62410a1b237b3038485 = $(`<div id="html_0e5904920d39b62410a1b237b3038485" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 230px; line-height: 1.4;">             <h4 style="margin:0 0 5px 0; color:#2c3e50; font-size:14px;">Mbube</h4>             <p style='font-style: italic; color: #34495e; margin: 6px 0;'>Artista: Solomon Linda's Original Evening Birds |  Lugar: Provincia de Natal (KwaZulu-Natal)</p>             <audio controls style="width:100%; margin-top:5px;"><source src="https://archive.org/download/thesecretmuseumofmankindvol4/07%20-%20Solomon%20Linda%27s%20Original%20Evening%20Birds%20-%20Mbube%20-%20Natal%2C%20S.A..mp3"></audio><img src="https://archive.org/download/thesecretmuseumofmankindvol4/R-2929884-1307823681.jpeg.jpg" style="width:100%; border-radius:5px; margin-top:5px;">             <ul style="font-size:11px; margin-top:10px; padding-left:15px; color:#555;">                                               </ul>         </div>         </div>`)[0];
+                popup_dbe348f12b147ee2347359462a5ddcf3.setContent(html_0e5904920d39b62410a1b237b3038485);
+            
+        
+
+        marker_9767082569e99f57ef32b9b6b6f6d60c.bindPopup(popup_dbe348f12b147ee2347359462a5ddcf3)
+        ;
+
+        
+    
+    
+                marker_9767082569e99f57ef32b9b6b6f6d60c.setIcon(icon_d57a549f67d2ed9f00a37d9ca03b4d43);
+            
+    
+            var marker_d0d2fee86b96f1d7342faaba6c7df18f = L.marker(
+                [-10.40137755454354, -53.61328125000001],
+                {
+}
+            ).addTo(map_afee001d3a6b229cd43338a66e3abfa6);
+        
+    
+            var icon_ad989cd5ed3b2036a747b07e11dea541 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2feee3dd1da5473d7c3be50957f4ecb4 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_febb26e8fd5c3eb1ffe8a600114054c0 = $(`<div id="html_febb26e8fd5c3eb1ffe8a600114054c0" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 230px; line-height: 1.4;">             <h4 style="margin:0 0 5px 0; color:#2c3e50; font-size:14px;">Caboclo Do Matto</h4>             <p style='font-style: italic; color: #34495e; margin: 6px 0;'>Artista: Regionale Orchestra | Lugar: Brasil</p>             <audio controls style="width:100%; margin-top:5px;"><source src="https://archive.org/download/thesecretmuseumofmankindvol4/08%20-%20Regionale%20Orchestra%20-%20Caboclo%20Do%20Matto%20-%20Brazil.mp3"></audio><img src="https://archive.org/download/thesecretmuseumofmankindvol4/R-2929884-1307823681.jpeg.jpg" style="width:100%; border-radius:5px; margin-top:5px;">             <ul style="font-size:11px; margin-top:10px; padding-left:15px; color:#555;">                                               </ul>         </div>         </div>`)[0];
+                popup_2feee3dd1da5473d7c3be50957f4ecb4.setContent(html_febb26e8fd5c3eb1ffe8a600114054c0);
+            
+        
+
+        marker_d0d2fee86b96f1d7342faaba6c7df18f.bindPopup(popup_2feee3dd1da5473d7c3be50957f4ecb4)
+        ;
+
+        
+    
+    
+                marker_d0d2fee86b96f1d7342faaba6c7df18f.setIcon(icon_ad989cd5ed3b2036a747b07e11dea541);
+            
+    
+            var marker_8f2305acebe394e8fb2e918ff0f6f434 = L.marker(
+                [-0.7690198781221198, 100.50292968750001],
+                {
+}
+            ).addTo(map_afee001d3a6b229cd43338a66e3abfa6);
+        
+    
+            var icon_8015e57bfcbfc0c4b4989323227193a0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_acb34e609489da203d04da3b6bd0e6b0 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_f5d966d09424fd20f82efdab196466eb = $(`<div id="html_f5d966d09424fd20f82efdab196466eb" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 230px; line-height: 1.4;">             <h4 style="margin:0 0 5px 0; color:#2c3e50; font-size:14px;">Randai Parjdain</h4>             <p style='font-style: italic; color: #34495e; margin: 6px 0;'>Artista: Djamris Batagah |  Lugar: Sumatra Occidental</p>             <audio controls style="width:100%; margin-top:5px;"><source src="https://archive.org/download/thesecretmuseumofmankindvol4/09%20-%20Djamris%20Batagah%20-%20Randai%20Parjdain%20-%20Western%20Sumatra.mp3"></audio><img src="https://archive.org/download/thesecretmuseumofmankindvol4/R-2929884-1307823681.jpeg.jpg" style="width:100%; border-radius:5px; margin-top:5px;">             <ul style="font-size:11px; margin-top:10px; padding-left:15px; color:#555;">                                               </ul>         </div>         </div>`)[0];
+                popup_acb34e609489da203d04da3b6bd0e6b0.setContent(html_f5d966d09424fd20f82efdab196466eb);
+            
+        
+
+        marker_8f2305acebe394e8fb2e918ff0f6f434.bindPopup(popup_acb34e609489da203d04da3b6bd0e6b0)
+        ;
+
+        
+    
+    
+                marker_8f2305acebe394e8fb2e918ff0f6f434.setIcon(icon_8015e57bfcbfc0c4b4989323227193a0);
+            
+    
+            var marker_04c5ce353d6308fc129b2a9067e55f94 = L.marker(
+                [61.16443708638272, 8.657226562500002],
+                {
+}
+            ).addTo(map_afee001d3a6b229cd43338a66e3abfa6);
+        
+    
+            var icon_d5a37d010661d6f3746c814c64e74b54 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1ed2e95ed304b078c9827847674f0b83 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_cc19b9d3bad22ef3e3658b590631f4d9 = $(`<div id="html_cc19b9d3bad22ef3e3658b590631f4d9" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 230px; line-height: 1.4;">             <h4 style="margin:0 0 5px 0; color:#2c3e50; font-size:14px;">Fjell - Ljom</h4>             <p style='font-style: italic; color: #34495e; margin: 6px 0;'>Artista: Hardingfeletrioen |  Lugar: Noruega</p>             <audio controls style="width:100%; margin-top:5px;"><source src="https://archive.org/download/thesecretmuseumofmankindvol4/10%20-%20Hardingfeletrioen%20-%20Fjell%20-%20Ljom%20-%20Norway.mp3"></audio><img src="https://archive.org/download/thesecretmuseumofmankindvol4/R-2929884-1307823681.jpeg.jpg" style="width:100%; border-radius:5px; margin-top:5px;">             <ul style="font-size:11px; margin-top:10px; padding-left:15px; color:#555;">                                               </ul>         </div>         </div>`)[0];
+                popup_1ed2e95ed304b078c9827847674f0b83.setContent(html_cc19b9d3bad22ef3e3658b590631f4d9);
+            
+        
+
+        marker_04c5ce353d6308fc129b2a9067e55f94.bindPopup(popup_1ed2e95ed304b078c9827847674f0b83)
+        ;
+
+        
+    
+    
+                marker_04c5ce353d6308fc129b2a9067e55f94.setIcon(icon_d5a37d010661d6f3746c814c64e74b54);
+            
+    
+            var marker_069cecc4c721c3c4eedfe88d38ac3cb1 = L.marker(
+                [39.26628442213066, 34.93652343750001],
+                {
+}
+            ).addTo(map_afee001d3a6b229cd43338a66e3abfa6);
+        
+    
+            var icon_0906a472b5bd9eee269b6207edf2c885 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_511a74bbdcc6977945929e5eefc9972f = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_526311944cf9abf54b28ec941c2fc1d7 = $(`<div id="html_526311944cf9abf54b28ec941c2fc1d7" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 230px; line-height: 1.4;">             <h4 style="margin:0 0 5px 0; color:#2c3e50; font-size:14px;">Mahur Gazel</h4>             <p style='font-style: italic; color: #34495e; margin: 6px 0;'>Artista: Haffouz Burhan |  Lugar: Turquía</p>             <audio controls style="width:100%; margin-top:5px;"><source src="https://archive.org/download/thesecretmuseumofmankindvol4/11%20-%20Haffouz%20Burhan%20-%20Mahur%20Gazel%20-%20Turkey.mp3"></audio><img src="https://archive.org/download/thesecretmuseumofmankindvol4/R-2929884-1307823681.jpeg.jpg" style="width:100%; border-radius:5px; margin-top:5px;">             <ul style="font-size:11px; margin-top:10px; padding-left:15px; color:#555;">                                               </ul>         </div>         </div>`)[0];
+                popup_511a74bbdcc6977945929e5eefc9972f.setContent(html_526311944cf9abf54b28ec941c2fc1d7);
+            
+        
+
+        marker_069cecc4c721c3c4eedfe88d38ac3cb1.bindPopup(popup_511a74bbdcc6977945929e5eefc9972f)
+        ;
+
+        
+    
+    
+                marker_069cecc4c721c3c4eedfe88d38ac3cb1.setIcon(icon_0906a472b5bd9eee269b6207edf2c885);
+            
+    
+            var marker_57d4302254582d7d92c990814496cc24 = L.marker(
+                [-8.211490323420682, 157.25830078125003],
+                {
+}
+            ).addTo(map_afee001d3a6b229cd43338a66e3abfa6);
+        
+    
+            var icon_242b0c260535e6a710e96b4d80397d60 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f394081c6453a526c60d568714d9f832 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_c65786f3c94d76d0ccd03439b8e77063 = $(`<div id="html_c65786f3c94d76d0ccd03439b8e77063" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 230px; line-height: 1.4;">             <h4 style="margin:0 0 5px 0; color:#2c3e50; font-size:14px;">Beautiful Body (Cuerpo bello)</h4>             <p style='font-style: italic; color: #34495e; margin: 6px 0;'>Artista: S. I. Band |  Lugar: Simbo Island</p>             <audio controls style="width:100%; margin-top:5px;"><source src="https://archive.org/download/thesecretmuseumofmankindvol4/12%20-%20S.%20I.%20Band%20-%20Beautiful%20Body%20-%20Simbo%20Island.mp3"></audio><img src="https://archive.org/download/thesecretmuseumofmankindvol4/R-2929884-1307823681.jpeg.jpg" style="width:100%; border-radius:5px; margin-top:5px;">             <ul style="font-size:11px; margin-top:10px; padding-left:15px; color:#555;">                                               </ul>         </div>         </div>`)[0];
+                popup_f394081c6453a526c60d568714d9f832.setContent(html_c65786f3c94d76d0ccd03439b8e77063);
+            
+        
+
+        marker_57d4302254582d7d92c990814496cc24.bindPopup(popup_f394081c6453a526c60d568714d9f832)
+        ;
+
+        
+    
+    
+                marker_57d4302254582d7d92c990814496cc24.setIcon(icon_242b0c260535e6a710e96b4d80397d60);
+            
+    
+            var marker_18c6d9c9aea497b3926c1748227696d7 = L.marker(
+                [52.802761415419674, -8.041992187500002],
+                {
+}
+            ).addTo(map_afee001d3a6b229cd43338a66e3abfa6);
+        
+    
+            var icon_df329c8302e49f63b580ef0f767badb5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c35290b29e57be84738249af0a5edc03 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_6332662b1f99a4e108ebd47a2b8f7f66 = $(`<div id="html_6332662b1f99a4e108ebd47a2b8f7f66" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 230px; line-height: 1.4;">             <h4 style="margin:0 0 5px 0; color:#2c3e50; font-size:14px;">Tory Island Reel</h4>             <p style='font-style: italic; color: #34495e; margin: 6px 0;'>Artista: William Mullaley |  Lugar: Eire (Irlanda)</p>             <audio controls style="width:100%; margin-top:5px;"><source src="https://archive.org/download/thesecretmuseumofmankindvol4/13%20-%20William%20Mullaley%20-%20Tory%20Island%20Reel%20-%20Eire.mp3"></audio><img src="https://archive.org/download/thesecretmuseumofmankindvol4/R-2929884-1307823681.jpeg.jpg" style="width:100%; border-radius:5px; margin-top:5px;">             <ul style="font-size:11px; margin-top:10px; padding-left:15px; color:#555;">                                               </ul>         </div>         </div>`)[0];
+                popup_c35290b29e57be84738249af0a5edc03.setContent(html_6332662b1f99a4e108ebd47a2b8f7f66);
+            
+        
+
+        marker_18c6d9c9aea497b3926c1748227696d7.bindPopup(popup_c35290b29e57be84738249af0a5edc03)
+        ;
+
+        
+    
+    
+                marker_18c6d9c9aea497b3926c1748227696d7.setIcon(icon_df329c8302e49f63b580ef0f767badb5);
+            
+    
+            var marker_d5dfce1ea53d32d23adfb24a0063027c = L.marker(
+                [29.257648503615542, 47.47741699218751],
+                {
+}
+            ).addTo(map_afee001d3a6b229cd43338a66e3abfa6);
+        
+    
+            var icon_38324372de8c456609544a6787f95a13 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8b40b57f9b15e203b184a9a62387579d = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_d7fd4d5dbfe50a4aeaaefedf7145dc7c = $(`<div id="html_d7fd4d5dbfe50a4aeaaefedf7145dc7c" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 230px; line-height: 1.4;">             <h4 style="margin:0 0 5px 0; color:#2c3e50; font-size:14px;">Fouad Burban El Amaría</h4>             <p style='font-style: italic; color: #34495e; margin: 6px 0;'>Artista: Abdul El Fadallah |  Lugar: Kuwait</p>             <audio controls style="width:100%; margin-top:5px;"><source src="https://archive.org/download/thesecretmuseumofmankindvol4/14%20-%20Abdul%20El%20Fadallah%20-%20Fouad%20Burban%20El%20Amar%C3%ADa%20-%20Kuwait.mp3"></audio><img src="https://archive.org/download/thesecretmuseumofmankindvol4/R-2929884-1307823681.jpeg.jpg" style="width:100%; border-radius:5px; margin-top:5px;">             <ul style="font-size:11px; margin-top:10px; padding-left:15px; color:#555;">                                               </ul>         </div>         </div>`)[0];
+                popup_8b40b57f9b15e203b184a9a62387579d.setContent(html_d7fd4d5dbfe50a4aeaaefedf7145dc7c);
+            
+        
+
+        marker_d5dfce1ea53d32d23adfb24a0063027c.bindPopup(popup_8b40b57f9b15e203b184a9a62387579d)
+        ;
+
+        
+    
+    
+                marker_d5dfce1ea53d32d23adfb24a0063027c.setIcon(icon_38324372de8c456609544a6787f95a13);
+            
+    
+            var marker_e429169e8f38dda64520cd4725a17db7 = L.marker(
+                [41.65649719441145, 44.0771484375],
+                {
+}
+            ).addTo(map_afee001d3a6b229cd43338a66e3abfa6);
+        
+    
+            var icon_79a801ca9a1d8999579db337902d509f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5b3e2aeb92b127a46380d0be099cddb8 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_4753520f73c57fce75d1ce3858ca8041 = $(`<div id="html_4753520f73c57fce75d1ce3858ca8041" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 230px; line-height: 1.4;">             <h4 style="margin:0 0 5px 0; color:#2c3e50; font-size:14px;">Dariko</h4>             <p style='font-style: italic; color: #34495e; margin: 6px 0;'>Artista: A. Potchvershuy |  Lugar: Georgia</p>             <audio controls style="width:100%; margin-top:5px;"><source src="https://archive.org/download/thesecretmuseumofmankindvol4/15%20-%20A.%20Potchvershuy%20-%20Dariko%20-%20Georgia.mp3"></audio><img src="https://archive.org/download/thesecretmuseumofmankindvol4/R-2929884-1307823681.jpeg.jpg" style="width:100%; border-radius:5px; margin-top:5px;">             <ul style="font-size:11px; margin-top:10px; padding-left:15px; color:#555;">                                               </ul>         </div>         </div>`)[0];
+                popup_5b3e2aeb92b127a46380d0be099cddb8.setContent(html_4753520f73c57fce75d1ce3858ca8041);
+            
+        
+
+        marker_e429169e8f38dda64520cd4725a17db7.bindPopup(popup_5b3e2aeb92b127a46380d0be099cddb8)
+        ;
+
+        
+    
+    
+                marker_e429169e8f38dda64520cd4725a17db7.setIcon(icon_79a801ca9a1d8999579db337902d509f);
+            
+    
+            var marker_6effb10c6f2aa354b21842731731a06b = L.marker(
+                [19.186677697957833, -96.767578125],
+                {
+}
+            ).addTo(map_afee001d3a6b229cd43338a66e3abfa6);
+        
+    
+            var icon_6d9edb93a34a91abfb313f3551881c07 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8026abe60d2cec198e14b6d67ef1a13b = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_9776b0c6503db8da0e37b4cf143be0bc = $(`<div id="html_9776b0c6503db8da0e37b4cf143be0bc" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 230px; line-height: 1.4;">             <h4 style="margin:0 0 5px 0; color:#2c3e50; font-size:14px;">La bamba</h4>             <p style='font-style: italic; color: #34495e; margin: 6px 0;'>Artista: El Jarocho |  Lugar:  Veracruz</p>             <audio controls style="width:100%; margin-top:5px;"><source src="https://archive.org/download/thesecretmuseumofmankindvol4/16%20-%20%22El%20Jarocho%22%20-%20La%20Bamba%20-%20Vera%20Cruz.mp3"></audio><img src="https://archive.org/download/thesecretmuseumofmankindvol4/R-2929884-1307823681.jpeg.jpg" style="width:100%; border-radius:5px; margin-top:5px;">             <ul style="font-size:11px; margin-top:10px; padding-left:15px; color:#555;">                                               </ul>         </div>         </div>`)[0];
+                popup_8026abe60d2cec198e14b6d67ef1a13b.setContent(html_9776b0c6503db8da0e37b4cf143be0bc);
+            
+        
+
+        marker_6effb10c6f2aa354b21842731731a06b.bindPopup(popup_8026abe60d2cec198e14b6d67ef1a13b)
+        ;
+
+        
+    
+    
+                marker_6effb10c6f2aa354b21842731731a06b.setIcon(icon_6d9edb93a34a91abfb313f3551881c07);
+            
+    
+            var marker_9e3cd5ad21a98942363e28807f6b2928 = L.marker(
+                [26.115985925333536, 29.135742187500004],
+                {
+}
+            ).addTo(map_afee001d3a6b229cd43338a66e3abfa6);
+        
+    
+            var icon_549782c9390ada9ed188ade62ff0db6d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fc1dc53526329385d6f4736147a5964e = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_7365dcbe43bad0f498f45aa55a5e1971 = $(`<div id="html_7365dcbe43bad0f498f45aa55a5e1971" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 230px; line-height: 1.4;">             <h4 style="margin:0 0 5px 0; color:#2c3e50; font-size:14px;">Oudet El Bahara Illa Watanhom</h4>             <p style='font-style: italic; color: #34495e; margin: 6px 0;'>Artista: Ahmed Abdul Kader |  Lugar: Egipto</p>             <audio controls style="width:100%; margin-top:5px;"><source src="https://archive.org/download/thesecretmuseumofmankindvol4/17%20-%20Ahmed%20Abdul%20Kader%20-%20Oudet%20El%20Bahara%20Illa%20Watanhom%20-%20Egypt.mp3"></audio><img src="https://archive.org/download/thesecretmuseumofmankindvol4/R-2929884-1307823681.jpeg.jpg" style="width:100%; border-radius:5px; margin-top:5px;">             <ul style="font-size:11px; margin-top:10px; padding-left:15px; color:#555;">                                               </ul>         </div>         </div>`)[0];
+                popup_fc1dc53526329385d6f4736147a5964e.setContent(html_7365dcbe43bad0f498f45aa55a5e1971);
+            
+        
+
+        marker_9e3cd5ad21a98942363e28807f6b2928.bindPopup(popup_fc1dc53526329385d6f4736147a5964e)
+        ;
+
+        
+    
+    
+                marker_9e3cd5ad21a98942363e28807f6b2928.setIcon(icon_549782c9390ada9ed188ade62ff0db6d);
+            
+    
+            var marker_80871aa297d34d294e0d7af813b59892 = L.marker(
+                [28.38173504322311, 83.9794921875],
+                {
+}
+            ).addTo(map_afee001d3a6b229cd43338a66e3abfa6);
+        
+    
+            var icon_b11d19c3d804029853484621dd6cb9f4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_903372043a91b660d1dea2720b9c8563 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_466a68ecd2eca958b9030b7da59d0e6c = $(`<div id="html_466a68ecd2eca958b9030b7da59d0e6c" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 230px; line-height: 1.4;">             <h4 style="margin:0 0 5px 0; color:#2c3e50; font-size:14px;">Sidi Ma Sidi Batai</h4>             <p style='font-style: italic; color: #34495e; margin: 6px 0;'>Artista: Guyok, Himself |  Lugar: Nepal</p>             <audio controls style="width:100%; margin-top:5px;"><source src="https://archive.org/download/thesecretmuseumofmankindvol4/18%20-%20%22Guyok%2C%20Himself%22%20-%20Sidi%20Ma%20Sidi%20Batai%20-%20Nepal.mp3"></audio><img src="https://archive.org/download/thesecretmuseumofmankindvol4/R-2929884-1307823681.jpeg.jpg" style="width:100%; border-radius:5px; margin-top:5px;">             <ul style="font-size:11px; margin-top:10px; padding-left:15px; color:#555;">                                               </ul>         </div>         </div>`)[0];
+                popup_903372043a91b660d1dea2720b9c8563.setContent(html_466a68ecd2eca958b9030b7da59d0e6c);
+            
+        
+
+        marker_80871aa297d34d294e0d7af813b59892.bindPopup(popup_903372043a91b660d1dea2720b9c8563)
+        ;
+
+        
+    
+    
+                marker_80871aa297d34d294e0d7af813b59892.setIcon(icon_b11d19c3d804029853484621dd6cb9f4);
+            
+    
+            var marker_795ca655df56be470a03544de43b7cb7 = L.marker(
+                [46.79253827035982, -71.41113281250001],
+                {
+}
+            ).addTo(map_afee001d3a6b229cd43338a66e3abfa6);
+        
+    
+            var icon_c20a0ae95e9b54c6720342b60da7c870 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dcaa651b6cc4e7e951bd21666f3c5e1d = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_7cb7b9b4f57969c244776abeeecdfc05 = $(`<div id="html_7cb7b9b4f57969c244776abeeecdfc05" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 230px; line-height: 1.4;">             <h4 style="margin:0 0 5px 0; color:#2c3e50; font-size:14px;">Talencourt</h4>             <p style='font-style: italic; color: #34495e; margin: 6px 0;'>Artista: Villeneuve & Bouchard |  Lugar: Quebec</p>             <audio controls style="width:100%; margin-top:5px;"><source src="https://archive.org/download/thesecretmuseumofmankindvol4/19%20-%20Villeneuve%20%26%20Bouchard%20-%20Talencourt%20-%20Quebec.mp3"></audio><img src="https://archive.org/download/thesecretmuseumofmankindvol4/R-2929884-1307823681.jpeg.jpg" style="width:100%; border-radius:5px; margin-top:5px;">             <ul style="font-size:11px; margin-top:10px; padding-left:15px; color:#555;">                                               </ul>         </div>         </div>`)[0];
+                popup_dcaa651b6cc4e7e951bd21666f3c5e1d.setContent(html_7cb7b9b4f57969c244776abeeecdfc05);
+            
+        
+
+        marker_795ca655df56be470a03544de43b7cb7.bindPopup(popup_dcaa651b6cc4e7e951bd21666f3c5e1d)
+        ;
+
+        
+    
+    
+                marker_795ca655df56be470a03544de43b7cb7.setIcon(icon_c20a0ae95e9b54c6720342b60da7c870);
+            
+    
+            var marker_283a321d16d93a363d0498a72cf01e24 = L.marker(
+                [56.559482483762245, -4.174804687500001],
+                {
+}
+            ).addTo(map_afee001d3a6b229cd43338a66e3abfa6);
+        
+    
+            var icon_e4647426a0aea27c3d1483c61d536010 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f7de4d9aad5b116bfdbbbecfc9ff90a5 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_9f4c1caaff1317d01e8e4f75cb882de7 = $(`<div id="html_9f4c1caaff1317d01e8e4f75cb882de7" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 230px; line-height: 1.4;">             <h4 style="margin:0 0 5px 0; color:#2c3e50; font-size:14px;">Eilean Mocaridh</h4>             <p style='font-style: italic; color: #34495e; margin: 6px 0;'>Artista: Archibald Grant |  Lugar: Escocia</p>             <audio controls style="width:100%; margin-top:5px;"><source src="https://archive.org/download/thesecretmuseumofmankindvol4/20%20-%20Archibald%20Grant%20-%20Eilean%20Mocaridh%20-%20Scotland.mp3"></audio><img src="https://archive.org/download/thesecretmuseumofmankindvol4/R-2929884-1307823681.jpeg.jpg" style="width:100%; border-radius:5px; margin-top:5px;">             <ul style="font-size:11px; margin-top:10px; padding-left:15px; color:#555;">                                               </ul>         </div>         </div>`)[0];
+                popup_f7de4d9aad5b116bfdbbbecfc9ff90a5.setContent(html_9f4c1caaff1317d01e8e4f75cb882de7);
+            
+        
+
+        marker_283a321d16d93a363d0498a72cf01e24.bindPopup(popup_f7de4d9aad5b116bfdbbbecfc9ff90a5)
+        ;
+
+        
+    
+    
+                marker_283a321d16d93a363d0498a72cf01e24.setIcon(icon_e4647426a0aea27c3d1483c61d536010);
+            
+    
+            var marker_f4ec9b8bd1d77ed91119367cebd30d50 = L.marker(
+                [40.98819156349393, 19.984130859375004],
+                {
+}
+            ).addTo(map_afee001d3a6b229cd43338a66e3abfa6);
+        
+    
+            var icon_0eb0022d2cb31645356ed427819596d8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_88c6d19dd02f4be6dc8cc77841b52f57 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_94b27ab30b57ab599ccfc725fa12b76a = $(`<div id="html_94b27ab30b57ab599ccfc725fa12b76a" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 230px; line-height: 1.4;">             <h4 style="margin:0 0 5px 0; color:#2c3e50; font-size:14px;">Valle E Gadjes</h4>             <p style='font-style: italic; color: #34495e; margin: 6px 0;'>Artista: Luajne Sazet Populare |  Lugar Albania</p>             <audio controls style="width:100%; margin-top:5px;"><source src="https://archive.org/download/thesecretmuseumofmankindvol4/21%20-%20Luajne%20Sazet%20Populare%20-%20Valle%20E%20Gadjes%20-%20Albania.mp3"></audio><img src="https://archive.org/download/thesecretmuseumofmankindvol4/R-2929884-1307823681.jpeg.jpg" style="width:100%; border-radius:5px; margin-top:5px;">             <ul style="font-size:11px; margin-top:10px; padding-left:15px; color:#555;">                                               </ul>         </div>         </div>`)[0];
+                popup_88c6d19dd02f4be6dc8cc77841b52f57.setContent(html_94b27ab30b57ab599ccfc725fa12b76a);
+            
+        
+
+        marker_f4ec9b8bd1d77ed91119367cebd30d50.bindPopup(popup_88c6d19dd02f4be6dc8cc77841b52f57)
+        ;
+
+        
+    
+    
+                marker_f4ec9b8bd1d77ed91119367cebd30d50.setIcon(icon_0eb0022d2cb31645356ed427819596d8);
+            
+    
+            var marker_d7bce38351a70fe64b841a5148c59e7c = L.marker(
+                [44.15068115978094, 20.544433593750004],
+                {
+}
+            ).addTo(map_afee001d3a6b229cd43338a66e3abfa6);
+        
+    
+            var icon_00a3688b94fc4184fc6e03ccb9cf0cc6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_894d2d13e219a21fefbac6eef17e2a3b = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_a351013cd24354323fc15a673ef6e729 = $(`<div id="html_a351013cd24354323fc15a673ef6e729" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 230px; line-height: 1.4;">             <h4 style="margin:0 0 5px 0; color:#2c3e50; font-size:14px;">Siroko Lisce Borovo</h4>             <p style='font-style: italic; color: #34495e; margin: 6px 0;'>Artista: Vojin Lutic |  Lugar: Serbia</p>             <audio controls style="width:100%; margin-top:5px;"><source src="https://archive.org/download/thesecretmuseumofmankindvol4/22%20-%20Vojin%20Lutic%20-%20Siroko%20Lisce%20Borovo%20-%20Serbia.mp3"></audio><img src="https://archive.org/download/thesecretmuseumofmankindvol4/R-2929884-1307823681.jpeg.jpg" style="width:100%; border-radius:5px; margin-top:5px;">             <ul style="font-size:11px; margin-top:10px; padding-left:15px; color:#555;">                                               </ul>         </div>         </div>`)[0];
+                popup_894d2d13e219a21fefbac6eef17e2a3b.setContent(html_a351013cd24354323fc15a673ef6e729);
+            
+        
+
+        marker_d7bce38351a70fe64b841a5148c59e7c.bindPopup(popup_894d2d13e219a21fefbac6eef17e2a3b)
+        ;
+
+        
+    
+    
+                marker_d7bce38351a70fe64b841a5148c59e7c.setIcon(icon_00a3688b94fc4184fc6e03ccb9cf0cc6);
+            
+    
+            var marker_73c7c249e6961757c89b018e3fba40a0 = L.marker(
+                [47.15984001304432, 19.401855468750004],
+                {
+}
+            ).addTo(map_afee001d3a6b229cd43338a66e3abfa6);
+        
+    
+            var icon_c38e669cd67ef8c1c6e5e8aca684a589 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_43be09907ccad197754c0690c2cdb2f2 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_e9c082e3690984d701764816849cc47d = $(`<div id="html_e9c082e3690984d701764816849cc47d" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 230px; line-height: 1.4;">             <h4 style="margin:0 0 5px 0; color:#2c3e50; font-size:14px;">Untitled Dance (Danza sin nombre)</h4>             <p style='font-style: italic; color: #34495e; margin: 6px 0;'>Artista: Cigan Group |  Lugar: Hungría</p>             <audio controls style="width:100%; margin-top:5px;"><source src="https://archive.org/download/thesecretmuseumofmankindvol4/23%20-%20Cigan%20Group%20-%20Untitled%20Dance%20-%20Hungary.mp3"></audio><img src="https://archive.org/download/thesecretmuseumofmankindvol4/R-2929884-1307823681.jpeg.jpg" style="width:100%; border-radius:5px; margin-top:5px;">             <ul style="font-size:11px; margin-top:10px; padding-left:15px; color:#555;">                                               </ul>         </div>         </div>`)[0];
+                popup_43be09907ccad197754c0690c2cdb2f2.setContent(html_e9c082e3690984d701764816849cc47d);
+            
+        
+
+        marker_73c7c249e6961757c89b018e3fba40a0.bindPopup(popup_43be09907ccad197754c0690c2cdb2f2)
+        ;
+
+        
+    
+    
+                marker_73c7c249e6961757c89b018e3fba40a0.setIcon(icon_c38e669cd67ef8c1c6e5e8aca684a589);
+            
+    
+            var marker_bf3b63795e9d3a1c3c5b9731bc462a55 = L.marker(
+                [-8.233237111274553, 115.15869140625001],
+                {
+}
+            ).addTo(map_afee001d3a6b229cd43338a66e3abfa6);
+        
+    
+            var icon_c48335474de2c915af5d12d86bbba2c0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c4e73befa60f0992ceb3b03ea6dc0be2 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_99cdfceaf56c286065f4fbd6125f5014 = $(`<div id="html_99cdfceaf56c286065f4fbd6125f5014" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 230px; line-height: 1.4;">             <h4 style="margin:0 0 5px 0; color:#2c3e50; font-size:14px;">Lago Taboehgari</h4>             <p style='font-style: italic; color: #34495e; margin: 6px 0;'>Artista: Ni Lemon, Dari Djangger |  Lugar: Bali</p>             <audio controls style="width:100%; margin-top:5px;"><source src="https://archive.org/download/thesecretmuseumofmankindvol4/24%20-%20Ni%20Lemon%2C%20Dari%20Djangger%20-%20Lago%20Taboehgari%20-%20Bali.mp3"></audio><img src="https://archive.org/download/thesecretmuseumofmankindvol4/R-2929884-1307823681.jpeg.jpg" style="width:100%; border-radius:5px; margin-top:5px;">             <ul style="font-size:11px; margin-top:10px; padding-left:15px; color:#555;">                                               </ul>         </div>         </div>`)[0];
+                popup_c4e73befa60f0992ceb3b03ea6dc0be2.setContent(html_99cdfceaf56c286065f4fbd6125f5014);
+            
+        
+
+        marker_bf3b63795e9d3a1c3c5b9731bc462a55.bindPopup(popup_c4e73befa60f0992ceb3b03ea6dc0be2)
+        ;
+
+        
+    
+    
+                marker_bf3b63795e9d3a1c3c5b9731bc462a55.setIcon(icon_c48335474de2c915af5d12d86bbba2c0);
+            
+    
+            var marker_af703a4e7551934ef1dd213d37606786 = L.marker(
+                [9.535748998133627, 7.910156250000001],
+                {
+}
+            ).addTo(map_afee001d3a6b229cd43338a66e3abfa6);
+        
+    
+            var icon_10996eb90d528cf6d4789e013e56af49 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9a1b5961323a07ee3f6ff3bebd3f257c = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_38d2b9c2e0eff0c59e08b50d2668b207 = $(`<div id="html_38d2b9c2e0eff0c59e08b50d2668b207" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 230px; line-height: 1.4;">             <h4 style="margin:0 0 5px 0; color:#2c3e50; font-size:14px;">Jubilee Anthem</h4>             <p style='font-style: italic; color: #34495e; margin: 6px 0;'>Artista: Eleja Choir |  Lugar:  Nigeria</p>             <audio controls style="width:100%; margin-top:5px;"><source src="https://archive.org/download/secretmuseummankindvol1/01%20-%20Eleja%20Choir%20-%20Jubilee%20Anthem%20-%20Nigeria.mp3"></audio><img src="https://archive.org/download/secretmuseummankindvol1/51mbE6YcLyL._SY450_.jpg" style="width:100%; border-radius:5px; margin-top:5px;">             <ul style="font-size:11px; margin-top:10px; padding-left:15px; color:#555;">                                               </ul>         </div>         </div>`)[0];
+                popup_9a1b5961323a07ee3f6ff3bebd3f257c.setContent(html_38d2b9c2e0eff0c59e08b50d2668b207);
+            
+        
+
+        marker_af703a4e7551934ef1dd213d37606786.bindPopup(popup_9a1b5961323a07ee3f6ff3bebd3f257c)
+        ;
+
+        
+    
+    
+                marker_af703a4e7551934ef1dd213d37606786.setIcon(icon_10996eb90d528cf6d4789e013e56af49);
+            
+    
+            var marker_3495ba82979303f17789fa07f83a1a08 = L.marker(
+                [40.08647729380884, 9.041748046875002],
+                {
+}
+            ).addTo(map_afee001d3a6b229cd43338a66e3abfa6);
+        
+    
+            var icon_57b0c163de70450e7c52bbbe023669b3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_33feb1b33bdd942200ab9503c04c2955 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_09b0da3da43f3a7aa024eb798facf3bd = $(`<div id="html_09b0da3da43f3a7aa024eb798facf3bd" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 230px; line-height: 1.4;">             <h4 style="margin:0 0 5px 0; color:#2c3e50; font-size:14px;">Fiorassio</h4>             <p style='font-style: italic; color: #34495e; margin: 6px 0;'>Artista: Effisio Melis |  Lugar: Sardinia</p>             <audio controls style="width:100%; margin-top:5px;"><source src="https://archive.org/download/secretmuseummankindvol1/02%20-%20Effisio%20Melis%20-%20Fiorassio%20-%20Sardinia.mp3"></audio><img src="https://archive.org/download/secretmuseummankindvol1/51mbE6YcLyL._SY450_.jpg" style="width:100%; border-radius:5px; margin-top:5px;">             <ul style="font-size:11px; margin-top:10px; padding-left:15px; color:#555;">                                               </ul>         </div>         </div>`)[0];
+                popup_33feb1b33bdd942200ab9503c04c2955.setContent(html_09b0da3da43f3a7aa024eb798facf3bd);
+            
+        
+
+        marker_3495ba82979303f17789fa07f83a1a08.bindPopup(popup_33feb1b33bdd942200ab9503c04c2955)
+        ;
+
+        
+    
+    
+                marker_3495ba82979303f17789fa07f83a1a08.setIcon(icon_57b0c163de70450e7c52bbbe023669b3);
+            
+    
+            var marker_18d973b0a4154877daff95e532356d75 = L.marker(
+                [64.62387720204691, 97.73437500000001],
+                {
+}
+            ).addTo(map_afee001d3a6b229cd43338a66e3abfa6);
+        
+    
+            var icon_9bfcfaf883b22c5e8ec1a97fdfd4fa97 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3869bdac3e8360c06e91e3dc04d5aeab = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_408fb88b4dfb9941f244d913e9d1245b = $(`<div id="html_408fb88b4dfb9941f244d913e9d1245b" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 230px; line-height: 1.4;">             <h4 style="margin:0 0 5px 0; color:#2c3e50; font-size:14px;">Techudo Techudiessa</h4>             <p style='font-style: italic; color: #34495e; margin: 6px 0;'>Artista: Savelli Walevitch |  Lugar: Rusia</p>             <audio controls style="width:100%; margin-top:5px;"><source src="https://archive.org/download/secretmuseummankindvol1/03%20-%20Savelli%20Walevitch%20-%20Techudo%20Techudiessa%20-%20Russia.mp3"></audio><img src="https://archive.org/download/secretmuseummankindvol1/51mbE6YcLyL._SY450_.jpg" style="width:100%; border-radius:5px; margin-top:5px;">             <ul style="font-size:11px; margin-top:10px; padding-left:15px; color:#555;">                                               </ul>         </div>         </div>`)[0];
+                popup_3869bdac3e8360c06e91e3dc04d5aeab.setContent(html_408fb88b4dfb9941f244d913e9d1245b);
+            
+        
+
+        marker_18d973b0a4154877daff95e532356d75.bindPopup(popup_3869bdac3e8360c06e91e3dc04d5aeab)
+        ;
+
+        
+    
+    
+                marker_18d973b0a4154877daff95e532356d75.setIcon(icon_9bfcfaf883b22c5e8ec1a97fdfd4fa97);
+            
+    
+            var marker_c689d9a92d150bc695c7b169a264b937 = L.marker(
+                [7.536764322084078, 80.85937500000001],
+                {
+}
+            ).addTo(map_afee001d3a6b229cd43338a66e3abfa6);
+        
+    
+            var icon_9b5b314ef00e8ffcecce40650fc6de26 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_aa5b7b310bf2fc54020541360669f79a = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_ca70c7395eb30dc8bc3c30886f1edcd7 = $(`<div id="html_ca70c7395eb30dc8bc3c30886f1edcd7" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 230px; line-height: 1.4;">             <h4 style="margin:0 0 5px 0; color:#2c3e50; font-size:14px;">Kapirigna</h4>             <p style='font-style: italic; color: #34495e; margin: 6px 0;'>Artista: Fonseka & Party |  Lugar: Sri Lanka</p>             <audio controls style="width:100%; margin-top:5px;"><source src="https://archive.org/download/secretmuseummankindvol1/04%20-%20Fonseka%20%26%20Party%20-%20Kapirigna%20-%20Ceylon.mp3"></audio><img src="https://archive.org/download/secretmuseummankindvol1/51mbE6YcLyL._SY450_.jpg" style="width:100%; border-radius:5px; margin-top:5px;">             <ul style="font-size:11px; margin-top:10px; padding-left:15px; color:#555;">                                               </ul>         </div>         </div>`)[0];
+                popup_aa5b7b310bf2fc54020541360669f79a.setContent(html_ca70c7395eb30dc8bc3c30886f1edcd7);
+            
+        
+
+        marker_c689d9a92d150bc695c7b169a264b937.bindPopup(popup_aa5b7b310bf2fc54020541360669f79a)
+        ;
+
+        
+    
+    
+                marker_c689d9a92d150bc695c7b169a264b937.setIcon(icon_9b5b314ef00e8ffcecce40650fc6de26);
+            
+    
+            var marker_f2933d3a8519c8773eab155c42962f95 = L.marker(
+                [26.78484736105119, 73.49853515625001],
+                {
+}
+            ).addTo(map_afee001d3a6b229cd43338a66e3abfa6);
+        
+    
+            var icon_0432d7258d5b184b8d0c82c6916a0d81 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d17eb33d2900e807d51e76c1f11cdd7e = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_a4bec54067e63ddc575708d84b940491 = $(`<div id="html_a4bec54067e63ddc575708d84b940491" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 230px; line-height: 1.4;">             <h4 style="margin:0 0 5px 0; color:#2c3e50; font-size:14px;">Jat Song</h4>             <p style='font-style: italic; color: #34495e; margin: 6px 0;'>Artista: Bhoora Singh |  Lugar: Rajahstan</p>             <audio controls style="width:100%; margin-top:5px;"><source src="https://archive.org/download/secretmuseummankindvol1/05%20-%20Bhoora%20Singh%20-%20Jat%20Song%20-%20Rajahstan.mp3"></audio><img src="https://archive.org/download/secretmuseummankindvol1/51mbE6YcLyL._SY450_.jpg" style="width:100%; border-radius:5px; margin-top:5px;">             <ul style="font-size:11px; margin-top:10px; padding-left:15px; color:#555;">                                               </ul>         </div>         </div>`)[0];
+                popup_d17eb33d2900e807d51e76c1f11cdd7e.setContent(html_a4bec54067e63ddc575708d84b940491);
+            
+        
+
+        marker_f2933d3a8519c8773eab155c42962f95.bindPopup(popup_d17eb33d2900e807d51e76c1f11cdd7e)
+        ;
+
+        
+    
+    
+                marker_f2933d3a8519c8773eab155c42962f95.setIcon(icon_0432d7258d5b184b8d0c82c6916a0d81);
+            
+    
+            var marker_82fa0b365a59c9f76860d46261347599 = L.marker(
+                [23.07973176244989, -80.77148437500001],
+                {
+}
+            ).addTo(map_afee001d3a6b229cd43338a66e3abfa6);
+        
+    
+            var icon_1edf5129e52dc2e277bf7d15e6fb64d0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cf57817ed4332813e835ae678d8e276b = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_35c8f35ffc3e861aab8f48ea87817dff = $(`<div id="html_35c8f35ffc3e861aab8f48ea87817dff" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 230px; line-height: 1.4;">             <h4 style="margin:0 0 5px 0; color:#2c3e50; font-size:14px;">Oye Mi Coro</h4>             <p style='font-style: italic; color: #34495e; margin: 6px 0;'>Artista: Septeto Matamoros |  Lugar: Cuba</p>             <audio controls style="width:100%; margin-top:5px;"><source src="https://archive.org/download/secretmuseummankindvol1/06%20-%20Septeto%20Matamoros%20-%20Oye%20Mi%20Coro%20-%20Cuba.mp3"></audio><img src="https://archive.org/download/secretmuseummankindvol1/51mbE6YcLyL._SY450_.jpg" style="width:100%; border-radius:5px; margin-top:5px;">             <ul style="font-size:11px; margin-top:10px; padding-left:15px; color:#555;">                                               </ul>         </div>         </div>`)[0];
+                popup_cf57817ed4332813e835ae678d8e276b.setContent(html_35c8f35ffc3e861aab8f48ea87817dff);
+            
+        
+
+        marker_82fa0b365a59c9f76860d46261347599.bindPopup(popup_cf57817ed4332813e835ae678d8e276b)
+        ;
+
+        
+    
+    
+                marker_82fa0b365a59c9f76860d46261347599.setIcon(icon_1edf5129e52dc2e277bf7d15e6fb64d0);
+            
+    
+            var marker_539023c5c70658232129fe9fedf152e3 = L.marker(
+                [45.89000815866184, 24.433593750000004],
+                {
+}
+            ).addTo(map_afee001d3a6b229cd43338a66e3abfa6);
+        
+    
+            var icon_12891e560e5b9483a6270c2b6c221762 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_26bcea354efad9136b9c498972ab3e73 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_e3d5f59d301bd4b16176d28343d4efc7 = $(`<div id="html_e3d5f59d301bd4b16176d28343d4efc7" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 230px; line-height: 1.4;">             <h4 style="margin:0 0 5px 0; color:#2c3e50; font-size:14px;">Dance Song (Canción de baile)</h4>             <p style='font-style: italic; color: #34495e; margin: 6px 0;'>Artista: Grupo Anónimo |  Lugar: Rumanía</p>             <audio controls style="width:100%; margin-top:5px;"><source src="https://archive.org/download/secretmuseummankindvol1/07%20-%20Anon.%20Group%20-%20Dance%20Song%20-%20Rumania.mp3"></audio><img src="https://archive.org/download/secretmuseummankindvol1/51mbE6YcLyL._SY450_.jpg" style="width:100%; border-radius:5px; margin-top:5px;">             <ul style="font-size:11px; margin-top:10px; padding-left:15px; color:#555;">                                               </ul>         </div>         </div>`)[0];
+                popup_26bcea354efad9136b9c498972ab3e73.setContent(html_e3d5f59d301bd4b16176d28343d4efc7);
+            
+        
+
+        marker_539023c5c70658232129fe9fedf152e3.bindPopup(popup_26bcea354efad9136b9c498972ab3e73)
+        ;
+
+        
+    
+    
+                marker_539023c5c70658232129fe9fedf152e3.setIcon(icon_12891e560e5b9483a6270c2b6c221762);
+            
+    
+            var marker_0cd0d6f6aaa75d8604f2a86e5e720867 = L.marker(
+                [15.876809064146771, 107.75390625],
+                {
+}
+            ).addTo(map_afee001d3a6b229cd43338a66e3abfa6);
+        
+    
+            var icon_076a94056e8ccf7688484557218d013d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1a24038c15a673502792f29de577480f = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_f64ba714c95c94401bbf3bf38a442bce = $(`<div id="html_f64ba714c95c94401bbf3bf38a442bce" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 230px; line-height: 1.4;">             <h4 style="margin:0 0 5px 0; color:#2c3e50; font-size:14px;">Ló'i Sông Nui</h4>             <p style='font-style: italic; color: #34495e; margin: 6px 0;'>Artista: Hoang-Vúy |  Lugar: Vietnam</p>             <audio controls style="width:100%; margin-top:5px;"><source src="https://archive.org/download/secretmuseummankindvol1/08%20-%20Hoang-V%C3%BAy%20-%20L%C3%B3%27i%20S%C3%B4ng%20Nui%20-%20Viet%20Nam.mp3"></audio><img src="https://archive.org/download/secretmuseummankindvol1/51mbE6YcLyL._SY450_.jpg" style="width:100%; border-radius:5px; margin-top:5px;">             <ul style="font-size:11px; margin-top:10px; padding-left:15px; color:#555;">                                               </ul>         </div>         </div>`)[0];
+                popup_1a24038c15a673502792f29de577480f.setContent(html_f64ba714c95c94401bbf3bf38a442bce);
+            
+        
+
+        marker_0cd0d6f6aaa75d8604f2a86e5e720867.bindPopup(popup_1a24038c15a673502792f29de577480f)
+        ;
+
+        
+    
+    
+                marker_0cd0d6f6aaa75d8604f2a86e5e720867.setIcon(icon_076a94056e8ccf7688484557218d013d);
+            
+    
+            var marker_fd3dc62a4c60c6c095f30a04dbb09acc = L.marker(
+                [41.59079685105603, 21.697998046875004],
+                {
+}
+            ).addTo(map_afee001d3a6b229cd43338a66e3abfa6);
+        
+    
+            var icon_898b03fb39035bd042201985e592be02 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_55a16866eb44a39eae9db958e4914c7c = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_90b5354ad199c2697ad041aba85bfa12 = $(`<div id="html_90b5354ad199c2697ad041aba85bfa12" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 230px; line-height: 1.4;">             <h4 style="margin:0 0 5px 0; color:#2c3e50; font-size:14px;">Selska Ratschentitza</h4>             <p style='font-style: italic; color: #34495e; margin: 6px 0;'>Artista: Stephanya G. Penchevya |  Lugar: Macedonia</p>             <audio controls style="width:100%; margin-top:5px;"><source src="https://archive.org/download/secretmuseummankindvol1/09%20-%20Stephanya%20G.%20Penchevya%20-%20Selska%20Ratschentitza%20-%20Macedonia.mp3"></audio><img src="https://archive.org/download/secretmuseummankindvol1/51mbE6YcLyL._SY450_.jpg" style="width:100%; border-radius:5px; margin-top:5px;">             <ul style="font-size:11px; margin-top:10px; padding-left:15px; color:#555;">                                               </ul>         </div>         </div>`)[0];
+                popup_55a16866eb44a39eae9db958e4914c7c.setContent(html_90b5354ad199c2697ad041aba85bfa12);
+            
+        
+
+        marker_fd3dc62a4c60c6c095f30a04dbb09acc.bindPopup(popup_55a16866eb44a39eae9db958e4914c7c)
+        ;
+
+        
+    
+    
+                marker_fd3dc62a4c60c6c095f30a04dbb09acc.setIcon(icon_898b03fb39035bd042201985e592be02);
+            
+    
+            var marker_f11a42bd454259f40bb531449e3914d0 = L.marker(
+                [-16.121770247345342, -151.59055197058228],
+                {
+}
+            ).addTo(map_afee001d3a6b229cd43338a66e3abfa6);
+        
+    
+            var icon_900e6dfac3ddece39a7f051326f0321c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_77e42aae15c42e5848159c673c050107 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_a7838a336584ff93923f3a41112399b0 = $(`<div id="html_a7838a336584ff93923f3a41112399b0" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 230px; line-height: 1.4;">             <h4 style="margin:0 0 5px 0; color:#2c3e50; font-size:14px;">'Upa-'Upa</h4>             <p style='font-style: italic; color: #34495e; margin: 6px 0;'>Les Tamaru |  Lugar: Society Islands</p>             <audio controls style="width:100%; margin-top:5px;"><source src="https://archive.org/download/secretmuseummankindvol1/10%20-%20Les%20Tamaru%20-%20%27Upa-%27Upa%20-%20Society%20Islands.mp3"></audio><img src="https://archive.org/download/secretmuseummankindvol1/51mbE6YcLyL._SY450_.jpg" style="width:100%; border-radius:5px; margin-top:5px;">             <ul style="font-size:11px; margin-top:10px; padding-left:15px; color:#555;">                                               </ul>         </div>         </div>`)[0];
+                popup_77e42aae15c42e5848159c673c050107.setContent(html_a7838a336584ff93923f3a41112399b0);
+            
+        
+
+        marker_f11a42bd454259f40bb531449e3914d0.bindPopup(popup_77e42aae15c42e5848159c673c050107)
+        ;
+
+        
+    
+    
+                marker_f11a42bd454259f40bb531449e3914d0.setIcon(icon_900e6dfac3ddece39a7f051326f0321c);
+            
+    
+            var marker_957b144a8cc557a43a1bddc9974edaef = L.marker(
+                [31.128199299111984, -7.382812500000001],
+                {
+}
+            ).addTo(map_afee001d3a6b229cd43338a66e3abfa6);
+        
+    
+            var icon_1e8d613fad33837723f7e82e723d3d3c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4723c074bd5bb9794db75ec5a2af2e49 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_fce38b4b4f8da1aafe1291849463770a = $(`<div id="html_fce38b4b4f8da1aafe1291849463770a" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 230px; line-height: 1.4;">             <h4 style="margin:0 0 5px 0; color:#2c3e50; font-size:14px;">Ma Thama Zinek</h4>             <p style='font-style: italic; color: #34495e; margin: 6px 0;'>Artista: Raoul Journo |  Lugar: Marruecos</p>             <audio controls style="width:100%; margin-top:5px;"><source src="https://archive.org/download/secretmuseummankindvol1/11%20-%20Raoul%20Journo%20-%20Ma%20Thama%20Zinek%20-%20Morocco.mp3"></audio><img src="https://archive.org/download/secretmuseummankindvol1/51mbE6YcLyL._SY450_.jpg" style="width:100%; border-radius:5px; margin-top:5px;">             <ul style="font-size:11px; margin-top:10px; padding-left:15px; color:#555;">                                               </ul>         </div>         </div>`)[0];
+                popup_4723c074bd5bb9794db75ec5a2af2e49.setContent(html_fce38b4b4f8da1aafe1291849463770a);
+            
+        
+
+        marker_957b144a8cc557a43a1bddc9974edaef.bindPopup(popup_4723c074bd5bb9794db75ec5a2af2e49)
+        ;
+
+        
+    
+    
+                marker_957b144a8cc557a43a1bddc9974edaef.setIcon(icon_1e8d613fad33837723f7e82e723d3d3c);
+            
+    
+            var marker_67411b8650dfe579d92dc6234880a7c7 = L.marker(
+                [-28.92163128242129, 24.9609375],
+                {
+}
+            ).addTo(map_afee001d3a6b229cd43338a66e3abfa6);
+        
+    
+            var icon_779cd5dbbb7287a6afb2fd3c5751e81e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e5bfe969a35d7bdb74caf1f85a0c064e = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_6ca9ae35e78cec9d941d78a349c6cd5c = $(`<div id="html_6ca9ae35e78cec9d941d78a349c6cd5c" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 230px; line-height: 1.4;">             <h4 style="margin:0 0 5px 0; color:#2c3e50; font-size:14px;">Angihambe</h4>             <p style='font-style: italic; color: #34495e; margin: 6px 0;'>Artista: Zwabesho Sibisi |  Lugar: Sudáfrica</p>             <audio controls style="width:100%; margin-top:5px;"><source src="https://archive.org/download/secretmuseummankindvol1/12%20-%20Zwabesho%20Sibisi%20-%20Angihambe%20-%20South%20Africa.mp3"></audio><img src="https://archive.org/download/secretmuseummankindvol1/51mbE6YcLyL._SY450_.jpg" style="width:100%; border-radius:5px; margin-top:5px;">             <ul style="font-size:11px; margin-top:10px; padding-left:15px; color:#555;">                                               </ul>         </div>         </div>`)[0];
+                popup_e5bfe969a35d7bdb74caf1f85a0c064e.setContent(html_6ca9ae35e78cec9d941d78a349c6cd5c);
+            
+        
+
+        marker_67411b8650dfe579d92dc6234880a7c7.bindPopup(popup_e5bfe969a35d7bdb74caf1f85a0c064e)
+        ;
+
+        
+    
+    
+                marker_67411b8650dfe579d92dc6234880a7c7.setIcon(icon_779cd5dbbb7287a6afb2fd3c5751e81e);
+            
+    
+            var marker_214171aad261418c090706630e6d390c = L.marker(
+                [36.56260003738548, 139.35058593750003],
+                {
+}
+            ).addTo(map_afee001d3a6b229cd43338a66e3abfa6);
+        
+    
+            var icon_fff13a4454d4b55ab853b06c9d350806 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6fc32dd674b3808aa71ebf521af6ff19 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_7d52666de4a91d9b54a30e26b5e68a89 = $(`<div id="html_7d52666de4a91d9b54a30e26b5e68a89" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 230px; line-height: 1.4;">             <h4 style="margin:0 0 5px 0; color:#2c3e50; font-size:14px;">Ise No Umi</h4>             <p style='font-style: italic; color: #34495e; margin: 6px 0;'>Artista: Imperial Household Orchestra |  Lugar: Japón</p>             <audio controls style="width:100%; margin-top:5px;"><source src="https://archive.org/download/secretmuseummankindvol1/13%20-%20Imperial%20Household%20Orchestra%20-%20Ise%20No%20Umi%20-%20Japan.mp3"></audio><img src="https://archive.org/download/secretmuseummankindvol1/51mbE6YcLyL._SY450_.jpg" style="width:100%; border-radius:5px; margin-top:5px;">             <ul style="font-size:11px; margin-top:10px; padding-left:15px; color:#555;">                                               </ul>         </div>         </div>`)[0];
+                popup_6fc32dd674b3808aa71ebf521af6ff19.setContent(html_7d52666de4a91d9b54a30e26b5e68a89);
+            
+        
+
+        marker_214171aad261418c090706630e6d390c.bindPopup(popup_6fc32dd674b3808aa71ebf521af6ff19)
+        ;
+
+        
+    
+    
+                marker_214171aad261418c090706630e6d390c.setIcon(icon_fff13a4454d4b55ab853b06c9d350806);
+            
+    
+            var marker_be9ffdfd9919a825bf90bc9d1bf86122 = L.marker(
+                [22.39071391683855, 78.66210937500001],
+                {
+}
+            ).addTo(map_afee001d3a6b229cd43338a66e3abfa6);
+        
+    
+            var icon_c2448aae0b3bd9d7d6858daf3c80b5b9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9d913c37691e450c7aafeb2eb83d7495 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_703753a3cfd0c03ddae7981b7eabdd38 = $(`<div id="html_703753a3cfd0c03ddae7981b7eabdd38" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 230px; line-height: 1.4;">             <h4 style="margin:0 0 5px 0; color:#2c3e50; font-size:14px;">Gungru Tarang</h4>             <p style='font-style: italic; color: #34495e; margin: 6px 0;'>Artista: Master Manahar Barve |  Lugar: India</p>             <audio controls style="width:100%; margin-top:5px;"><source src="https://archive.org/download/secretmuseummankindvol1/14%20-%20Master%20Manahar%20Barve%20-%20Gungru%20Tarang%20-%20India.mp3"></audio><img src="https://archive.org/download/secretmuseummankindvol1/51mbE6YcLyL._SY450_.jpg" style="width:100%; border-radius:5px; margin-top:5px;">             <ul style="font-size:11px; margin-top:10px; padding-left:15px; color:#555;">                                               </ul>         </div>         </div>`)[0];
+                popup_9d913c37691e450c7aafeb2eb83d7495.setContent(html_703753a3cfd0c03ddae7981b7eabdd38);
+            
+        
+
+        marker_be9ffdfd9919a825bf90bc9d1bf86122.bindPopup(popup_9d913c37691e450c7aafeb2eb83d7495)
+        ;
+
+        
+    
+    
+                marker_be9ffdfd9919a825bf90bc9d1bf86122.setIcon(icon_c2448aae0b3bd9d7d6858daf3c80b5b9);
+            
+    
+            var marker_1830a07bd05e980772b86b30889de874 = L.marker(
+                [42.99661231842139, -2.5598144531250004],
+                {
+}
+            ).addTo(map_afee001d3a6b229cd43338a66e3abfa6);
+        
+    
+            var icon_2dc8994f5ad384095639db5c75f42a92 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_599233e0743162ac69bc8e3519858187 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_c66fc378c230157ce0785ddc130f3b68 = $(`<div id="html_c66fc378c230157ce0785ddc130f3b68" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 230px; line-height: 1.4;">             <h4 style="margin:0 0 5px 0; color:#2c3e50; font-size:14px;">Te Quiero Bilbaina</h4>             <p style='font-style: italic; color: #34495e; margin: 6px 0;'>Artista: Triki-Triki |  Lugar: País Vasco</p>             <audio controls style="width:100%; margin-top:5px;"><source src="https://archive.org/download/secretmuseummankindvol1/15%20-%20Triki-Triki%20-%20Te%20Quiero%20Bilbaina%20-%20The%20Basque.mp3"></audio><img src="https://archive.org/download/secretmuseummankindvol1/51mbE6YcLyL._SY450_.jpg" style="width:100%; border-radius:5px; margin-top:5px;">             <ul style="font-size:11px; margin-top:10px; padding-left:15px; color:#555;">                                               </ul>         </div>         </div>`)[0];
+                popup_599233e0743162ac69bc8e3519858187.setContent(html_c66fc378c230157ce0785ddc130f3b68);
+            
+        
+
+        marker_1830a07bd05e980772b86b30889de874.bindPopup(popup_599233e0743162ac69bc8e3519858187)
+        ;
+
+        
+    
+    
+                marker_1830a07bd05e980772b86b30889de874.setIcon(icon_2dc8994f5ad384095639db5c75f42a92);
+            
+    
+            var marker_67e121252a554e7825f38c0d6728e1c7 = L.marker(
+                [64.58618480339979, 16.611328125000004],
+                {
+}
+            ).addTo(map_afee001d3a6b229cd43338a66e3abfa6);
+        
+    
+            var icon_80fdb1f773e8761eed8775962155a7bc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_20a97d375a9d10dbfc0466cdf5bc769b = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_936e02fc7d1d190c0203218cd2b438a2 = $(`<div id="html_936e02fc7d1d190c0203218cd2b438a2" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 230px; line-height: 1.4;">             <h4 style="margin:0 0 5px 0; color:#2c3e50; font-size:14px;">Byggnan</h4>             <p style='font-style: italic; color: #34495e; margin: 6px 0;'>Artista: Eric Sahlstrom |  Lugar: Suecia</p>             <audio controls style="width:100%; margin-top:5px;"><source src="https://archive.org/download/secretmuseummankindvol1/16%20-%20Eric%20Sahlstrom%20-%20Byggnan%20-%20Sweden.mp3"></audio><img src="https://archive.org/download/secretmuseummankindvol1/51mbE6YcLyL._SY450_.jpg" style="width:100%; border-radius:5px; margin-top:5px;">             <ul style="font-size:11px; margin-top:10px; padding-left:15px; color:#555;">                                               </ul>         </div>         </div>`)[0];
+                popup_20a97d375a9d10dbfc0466cdf5bc769b.setContent(html_936e02fc7d1d190c0203218cd2b438a2);
+            
+        
+
+        marker_67e121252a554e7825f38c0d6728e1c7.bindPopup(popup_20a97d375a9d10dbfc0466cdf5bc769b)
+        ;
+
+        
+    
+    
+                marker_67e121252a554e7825f38c0d6728e1c7.setIcon(icon_80fdb1f773e8761eed8775962155a7bc);
+            
+    
+            var marker_85ead1e09897974a30467ee52f2dec77 = L.marker(
+                [31.74685416292141, 35.15625000000001],
+                {
+}
+            ).addTo(map_afee001d3a6b229cd43338a66e3abfa6);
+        
+    
+            var icon_e1839a1f5cbdff23de334852a3c6b237 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c46c8337ca6ab5b7b108923705d1cdd5 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_15185a400d4fa2f253befe783ff661d1 = $(`<div id="html_15185a400d4fa2f253befe783ff661d1" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 230px; line-height: 1.4;">             <h4 style="margin:0 0 5px 0; color:#2c3e50; font-size:14px;">A Europaische Kolomyka</h4>             <p style='font-style: italic; color: #34495e; margin: 6px 0;'>Artista: Raderman-Beckerman Orchestra |  Lugar: Yiddish</p>             <audio controls style="width:100%; margin-top:5px;"><source src="https://archive.org/download/secretmuseummankindvol1/17%20-%20Raderman-Beckerman%20Orchestra%20-%20A%20Europaische%20Kolomyka%20-%20Yiddish.mp3"></audio><img src="https://archive.org/download/secretmuseummankindvol1/51mbE6YcLyL._SY450_.jpg" style="width:100%; border-radius:5px; margin-top:5px;">             <ul style="font-size:11px; margin-top:10px; padding-left:15px; color:#555;">                                               </ul>         </div>         </div>`)[0];
+                popup_c46c8337ca6ab5b7b108923705d1cdd5.setContent(html_15185a400d4fa2f253befe783ff661d1);
+            
+        
+
+        marker_85ead1e09897974a30467ee52f2dec77.bindPopup(popup_c46c8337ca6ab5b7b108923705d1cdd5)
+        ;
+
+        
+    
+    
+                marker_85ead1e09897974a30467ee52f2dec77.setIcon(icon_e1839a1f5cbdff23de334852a3c6b237);
+            
+    
+            var marker_52c103a7f3ab35fb3311a566a74fbbe9 = L.marker(
+                [52.1874047455997, 19.072265625000004],
+                {
+}
+            ).addTo(map_afee001d3a6b229cd43338a66e3abfa6);
+        
+    
+            var icon_4f7b0bf23934bfac7706b31b91ddd765 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_29f3e450b85586356c38eeed1b0a2cca = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_65b23deb2168b7cfe5c060624e7ca9f7 = $(`<div id="html_65b23deb2168b7cfe5c060624e7ca9f7" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 230px; line-height: 1.4;">             <h4 style="margin:0 0 5px 0; color:#2c3e50; font-size:14px;">Nie Smuccie Sie Tatry</h4>             <p style='font-style: italic; color: #34495e; margin: 6px 0;'>Artista: Goralska Orkiestra |  Lugar: Polonia</p>             <audio controls style="width:100%; margin-top:5px;"><source src="https://archive.org/download/secretmuseummankindvol1/18%20-%20Goralska%20Orkiestra%20-%20Nie%20Smuccie%20Sie%20Tatry%20-%20Poland.mp3"></audio><img src="https://archive.org/download/secretmuseummankindvol1/51mbE6YcLyL._SY450_.jpg" style="width:100%; border-radius:5px; margin-top:5px;">             <ul style="font-size:11px; margin-top:10px; padding-left:15px; color:#555;">                                               </ul>         </div>         </div>`)[0];
+                popup_29f3e450b85586356c38eeed1b0a2cca.setContent(html_65b23deb2168b7cfe5c060624e7ca9f7);
+            
+        
+
+        marker_52c103a7f3ab35fb3311a566a74fbbe9.bindPopup(popup_29f3e450b85586356c38eeed1b0a2cca)
+        ;
+
+        
+    
+    
+                marker_52c103a7f3ab35fb3311a566a74fbbe9.setIcon(icon_4f7b0bf23934bfac7706b31b91ddd765);
+            
+    
+            var marker_7b8187ea83c57277f90ac97a1815df58 = L.marker(
+                [18.166730410221938, -77.56347656250001],
+                {
+}
+            ).addTo(map_afee001d3a6b229cd43338a66e3abfa6);
+        
+    
+            var icon_dc6652aa7f57c44de60f39523cfc1c8a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3aa3270e429052f9275171d28b43c7fc = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_06c09f7f4a41ce5b0382e78e19ef74ad = $(`<div id="html_06c09f7f4a41ce5b0382e78e19ef74ad" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 230px; line-height: 1.4;">             <h4 style="margin:0 0 5px 0; color:#2c3e50; font-size:14px;">Hill And Gully Ridel Mandeville Road</h4>             <p style='font-style: italic; color: #34495e; margin: 6px 0;'>Artista: Lord Composer |  Lugar: Jamaica</p>             <audio controls style="width:100%; margin-top:5px;"><source src="https://archive.org/download/secretmuseummankindvol1/19%20-%20Lord%20Composer%20-%20Hill%20And%20Gully%20Ridel%20Mandeville%20Road%20-%20Jamaica.mp3"></audio><img src="https://archive.org/download/secretmuseummankindvol1/51mbE6YcLyL._SY450_.jpg" style="width:100%; border-radius:5px; margin-top:5px;">             <ul style="font-size:11px; margin-top:10px; padding-left:15px; color:#555;">                                               </ul>         </div>         </div>`)[0];
+                popup_3aa3270e429052f9275171d28b43c7fc.setContent(html_06c09f7f4a41ce5b0382e78e19ef74ad);
+            
+        
+
+        marker_7b8187ea83c57277f90ac97a1815df58.bindPopup(popup_3aa3270e429052f9275171d28b43c7fc)
+        ;
+
+        
+    
+    
+                marker_7b8187ea83c57277f90ac97a1815df58.setIcon(icon_dc6652aa7f57c44de60f39523cfc1c8a);
+            
+    
+            var marker_908decd094377ba165e345e8db1a8d17 = L.marker(
+                [10.18518740926906, 38.3203125],
+                {
+}
+            ).addTo(map_afee001d3a6b229cd43338a66e3abfa6);
+        
+    
+            var icon_5e14d95f232af85a99b91efa98d46ad2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_45594c23b0d79ecc9060ffb47a876a97 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_96d6a3c84263d6fca9816577f21e35e7 = $(`<div id="html_96d6a3c84263d6fca9816577f21e35e7" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 230px; line-height: 1.4;">             <h4 style="margin:0 0 5px 0; color:#2c3e50; font-size:14px;">Medina</h4>             <p style='font-style: italic; color: #34495e; margin: 6px 0;'>Artista: Haile, Ichigou |  Lugar: Etiopía</p>             <audio controls style="width:100%; margin-top:5px;"><source src="https://archive.org/download/secretmuseummankindvol1/20%20-%20Haile%2C%20Ichigou%20-%20Medina%20-%20Abyssinia.mp3"></audio><img src="https://archive.org/download/secretmuseummankindvol1/51mbE6YcLyL._SY450_.jpg" style="width:100%; border-radius:5px; margin-top:5px;">             <ul style="font-size:11px; margin-top:10px; padding-left:15px; color:#555;">                                               </ul>         </div>         </div>`)[0];
+                popup_45594c23b0d79ecc9060ffb47a876a97.setContent(html_96d6a3c84263d6fca9816577f21e35e7);
+            
+        
+
+        marker_908decd094377ba165e345e8db1a8d17.bindPopup(popup_45594c23b0d79ecc9060ffb47a876a97)
+        ;
+
+        
+    
+    
+                marker_908decd094377ba165e345e8db1a8d17.setIcon(icon_5e14d95f232af85a99b91efa98d46ad2);
+            
+    
+            var marker_154d0af04c47c23930944b069234864c = L.marker(
+                [37.31775185163688, -4.614257812500001],
+                {
+}
+            ).addTo(map_afee001d3a6b229cd43338a66e3abfa6);
+        
+    
+            var icon_aa225549ebdf826ac11b8049f362fbd6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cbe3a8d490c44d7e571b90d53b34b7f8 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_913f6ea3fcb1923c42c676b7d9e20bba = $(`<div id="html_913f6ea3fcb1923c42c676b7d9e20bba" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 230px; line-height: 1.4;">             <h4 style="margin:0 0 5px 0; color:#2c3e50; font-size:14px;">Alegrias</h4>             <p style='font-style: italic; color: #34495e; margin: 6px 0;'>Artista: La Niña De Los Peines |  Lugar: Andalucia</p>             <audio controls style="width:100%; margin-top:5px;"><source src="https://archive.org/download/secretmuseummankindvol1/21%20-%20La%20Ni%C3%B1a%20De%20Los%20Peines%20-%20Alegrias%20-%20Andalucia.mp3"></audio><img src="https://archive.org/download/secretmuseummankindvol1/51mbE6YcLyL._SY450_.jpg" style="width:100%; border-radius:5px; margin-top:5px;">             <ul style="font-size:11px; margin-top:10px; padding-left:15px; color:#555;">                                               </ul>         </div>         </div>`)[0];
+                popup_cbe3a8d490c44d7e571b90d53b34b7f8.setContent(html_913f6ea3fcb1923c42c676b7d9e20bba);
+            
+        
+
+        marker_154d0af04c47c23930944b069234864c.bindPopup(popup_cbe3a8d490c44d7e571b90d53b34b7f8)
+        ;
+
+        
+    
+    
+                marker_154d0af04c47c23930944b069234864c.setIcon(icon_aa225549ebdf826ac11b8049f362fbd6);
+            
+    
+            var marker_76bfac017bcfc6e564442769fe800b8d = L.marker(
+                [11.007926501891358, 123.45611572265626],
+                {
+}
+            ).addTo(map_afee001d3a6b229cd43338a66e3abfa6);
+        
+    
+            var icon_54f2ae07642943e014d7f44184c6a8ce = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bedf1d40306abbe80016a55588d67e49 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_334faebc1fbc0286b02ef62f2f5e792d = $(`<div id="html_334faebc1fbc0286b02ef62f2f5e792d" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 230px; line-height: 1.4;">             <h4 style="margin:0 0 5px 0; color:#2c3e50; font-size:14px;">Naidasay Toy Pusoc</h4>             <p style='font-style: italic; color: #34495e; margin: 6px 0;'>Artista: Duetto Pamolinao |  Lugar: </p>             <audio controls style="width:100%; margin-top:5px;"><source src="https://archive.org/download/secretmuseummankindvol1/22%20-%20Duetto%20Pamolinao%20-%20Naidasay%20Toy%20Pusoc%20-%20Visayan%20Islands.mp3"></audio><img src="https://archive.org/download/secretmuseummankindvol1/51mbE6YcLyL._SY450_.jpg" style="width:100%; border-radius:5px; margin-top:5px;">             <ul style="font-size:11px; margin-top:10px; padding-left:15px; color:#555;">                                               </ul>         </div>         </div>`)[0];
+                popup_bedf1d40306abbe80016a55588d67e49.setContent(html_334faebc1fbc0286b02ef62f2f5e792d);
+            
+        
+
+        marker_76bfac017bcfc6e564442769fe800b8d.bindPopup(popup_bedf1d40306abbe80016a55588d67e49)
+        ;
+
+        
+    
+    
+                marker_76bfac017bcfc6e564442769fe800b8d.setIcon(icon_54f2ae07642943e014d7f44184c6a8ce);
+            
+    
+            var marker_9c9e3b5db912535d71094e1b12394bc0 = L.marker(
+                [-17.74685922956422, 178.11617391973076],
+                {
+}
+            ).addTo(map_afee001d3a6b229cd43338a66e3abfa6);
+        
+    
+            var icon_40189ce1b99e5281332d52b5a2567f22 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "cadetblue",
+  "iconColor": "white",
+  "icon": "music",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_40a32323c3505493b13f33992d18c29b = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_132b75979c605ebe7675541b49669d1b = $(`<div id="html_132b75979c605ebe7675541b49669d1b" style="width: 100.0%; height: 100.0%;">         <div style="font-family: sans-serif; width: 230px; line-height: 1.4;">             <h4 style="margin:0 0 5px 0; color:#2c3e50; font-size:14px;">Isa Lei</h4>             <p style='font-style: italic; color: #34495e; margin: 6px 0;'>Artista: Andi Thakambau |  Lugar: Fiji</p>             <audio controls style="width:100%; margin-top:5px;"><source src="https://archive.org/download/secretmuseummankindvol1/23%20-%20Andi%20Thakambau%20-%20Isa%20Lei%20-%20Fiji.mp3"></audio><img src="https://archive.org/download/secretmuseummankindvol1/51mbE6YcLyL._SY450_.jpg" style="width:100%; border-radius:5px; margin-top:5px;">             <ul style="font-size:11px; margin-top:10px; padding-left:15px; color:#555;">                                               </ul>         </div>         </div>`)[0];
+                popup_40a32323c3505493b13f33992d18c29b.setContent(html_132b75979c605ebe7675541b49669d1b);
+            
+        
+
+        marker_9c9e3b5db912535d71094e1b12394bc0.bindPopup(popup_40a32323c3505493b13f33992d18c29b)
+        ;
+
+        
+    
+    
+                marker_9c9e3b5db912535d71094e1b12394bc0.setIcon(icon_40189ce1b99e5281332d52b5a2567f22);
+            
+    
+            map_afee001d3a6b229cd43338a66e3abfa6.fitBounds(
+                [[-29.104176683949973, -151.59055197058228], [64.62387720204691, 178.11617391973076]],
+                {}
+            );
+        
+    
+            var layer_control_57ce9955c137f3199eb769ca674e0678_layers = {
+                base_layers : {
+                    "Mapa de Calles (OSM)" : tile_layer_d4c34f93a6261fe8357783db610e1606,
+                    "Topograf\u00eda/Relieve" : tile_layer_2f60becce9ea5ba051aaa4f9b27fe10d,
+                    "Sat\u00e9lite" : tile_layer_f1630dcd179429db4cce9c2d64a8ab9e,
+                },
+                overlays :  {
+                },
+            };
+            let layer_control_57ce9955c137f3199eb769ca674e0678 = L.control.layers(
+                layer_control_57ce9955c137f3199eb769ca674e0678_layers.base_layers,
+                layer_control_57ce9955c137f3199eb769ca674e0678_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_afee001d3a6b229cd43338a66e3abfa6);
+
+        
+</script>
+</html>
